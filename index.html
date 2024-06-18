@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Harry Leddy</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+	<script src="jquery-3.7.1.min.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Harry Leddy</h1>
-        <p>Engineering Student at Trinity College Dublin</p>
+        <div class="parallax"></div>
+        <div class="header-content">
+            <h1>Harry Leddy</h1>
+            <p>Engineering Student at Trinity College Dublin</p>
+        </div>
     </header>
 
     <nav>
@@ -23,7 +39,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Welcome to my portfolio site! I am an Engineering student at Trinity College Dublin, passionate about designing and building innovative solutions.</p>
+        <p>I am an engineering student at Trinity College Dublin, passionate about designing and building. I love every aspect of engineering, blending problem-solving with creativity. From early programming projects in Scratch to participating in CTYI’s Early University Entrance program, I have continually pushed myself to expand my knowledge and skills. My current focus is on electronic and computer engineering, where I aim to specialise in my third year of college.</p>
     </section>
 
     <section id="clubs">
@@ -31,34 +47,100 @@
 
         <div class="club">
             <h3>Formula Trinity</h3>
-            <p>I'm on the powertrain team for Formula Trinity, our college's team for the Formula Student competition in the UK. I contribute by making CAD designs, fluid flow simulations, and attending manufacturing sessions to weld, angle grind, plasma cut, and implement the parts I designed.</p>
+            <p>As a member of the powertrain team for Formula Trinity, our college's team for the Formula Student competition in the UK, I have honed my skills in CAD design, fluid flow simulations, and hands-on manufacturing. My responsibilities include welding, angle grinding, plasma cutting, and implementing the parts I design. I successfully earned the 'Rookie of the Year' award for being the best newcomer, highlighting the significant value of my contributions to the team.
+            	<br>
+            	<br>
+            For more information about the team, check out the <a href="https://www.formulatrinity.ie/">Formula Trinity Website</a>
+            </p>
+        		<div class="carousel">
+                <div><img src="ft_slide_2.JPG" alt="Image 1"></div>
+                <div><img src="ft_slide_1.JPG" alt="Image 2"></div>
+                <div><img src="ft_slide_4.png" alt="Image 4">
+                	<p>ANSYS airflow simulation comparing plenum designs.</p></div>
+                <div><img src="ft_slide_3.JPG" alt="Image 3"></div>
+
+            </div>
+
         </div>
 
         <div class="club">
             <h3>EirSpace</h3>
-            <p>In EirSpace, I'm on the Thrust Vector Control team. I've done CAD work for their Lander Challenge drone prototype and researched various electronics.</p>
+            <p>EirSpace is Ireland’s first student-led aerospace engineering organisation. In EirSpace, I am part of the Thrust Vector Control team, where I contribute to CAD designs and research various electronics for the Lander Challenge drone prototype. This role has been instrumental in solidifying my interest in aerospace engineering and electronics
+            	<br><br>
+            	For more information about the group, check out the <a href="https://www.eirspace.org//">EirSpace Website</a></p>
         </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Leaving Certificate Computer Science</h3>
-            <p>Details about the projects you completed during your Leaving Certificate Computer Science course.</p>
+            <h3>Leaving Cert Computer Science</h3>
+            <p>For my Leaving Certificate in Computer Science, I undertook an ambitious project to create a full model of the game “Wordle,” including an AI simulation that improves iteratively using a reinforcement learning algorithm I developed in Python. This project not only earned me a H1 grade but also provided deep insights into Python, GUI development, and machine learning, demonstrating my ability to tackle complex problems and deliver innovative solutions.
+            	<br><br>
+            	As part of the project I had to make a video, which can be viewed below, or check out the <a href="https://github.com/harL06/Final_Leaving_Cert_CompSci_Project">Project's GitHub Page</a></p>
+            <div class="video">
+            	<iframe width="560" height="315" src="https://www.youtube.com/embed/kVWKAynsGl4?si=inLWfELCilkBK1wk" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
         <div class="project">
-            <h3>Leaving Certificate Technology</h3>
-            <p>Details about the projects you completed during your Leaving Certificate Technology course.</p>
+            <h3>Leaving Cert Technology</h3>
+            <p>In my Leaving Certificate Technology project, I designed and built a Chinese Dragon parade float, creating a comprehensive CAD model using Fusion 360. This project integrated mechanical and electronic design elements and showcased my ability to combine creativity with technical skills, earning me another H1 grade.
+            	<br><br>
+            Feel free to check out the <a href="https://drive.google.com/file/d/1AFsHVlmfe6JuXjNBi10g8X-Qg07dhCii/view?usp=sharing">Full Portfolio for the Project</a></p>
+
+            <div class="carousel">
+                <div><img src="tech_1.JPG" alt="Image 1"></div>
+                <div><img src="tech_3.png" alt="Image 2"></div>
+                <div><img src="tech_2.jpg" alt="Image 4"></div>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>You can reach me at: <a href="mailto:leddyh@tcd.ie">leddyh@tcd.ie</a></p>
+        <div class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:leddyh@tcd.ie">Email: leddyh@tcd.ie</a>
+        </div>
+        <div class="contact-method">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+353838801260">Phone: +353 83 880 1260</a>
+        </div>
+        <div class="contact-method">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/harry-leddy-b2540b296">LinkedIn: Harry Leddy</a>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Harry Leddy. All rights reserved.</p>
     </footer>
+
+    <script src="jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.js"></script>
+    <script>
+
+	$(document).ready(function(){
+	    $('.carousel').slick({
+	        dots: true,
+	        arrows: true,
+	        infinite: true,
+	        speed: 300,
+	        slidesToShow: 1,
+	        autoplay: true,
+	        autoplaySpeed: 3000, // Adjust autoplay speed as needed
+	    });
+	});
+
+
+
+    document.addEventListener('scroll', function() {
+        var scrolled = window.pageYOffset;
+        var parallax = document.querySelector('.parallax');
+        var header = document.querySelector('.header-content');
+        parallax.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) scale(1.4)';
+        header.style.transform = 'translateY(' + (scrolled * 0.15) + 'px)';
+    });
+    </script>
 </body>
 </html>

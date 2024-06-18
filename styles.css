@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -10,26 +10,61 @@ body {
 }
 
 header {
-    background: #0a74da;
-    color: #fff;
-    padding: 2rem 0;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
     text-align: center;
+    color: #fff;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 85px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 header p {
     margin: 0.5rem 0 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('header.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+    transform: translateZ(0) scale(1.4);
+    transition: transform 0.1s ease-out;
 }
 
 nav {
-    background: #0056a3;
+    background: #0C2D1C;
     color: #fff;
     overflow: hidden;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -50,75 +85,147 @@ nav ul li a {
     padding: 0.75rem 1rem;
     display: block;
     transition: background 0.3s;
+    border-radius: 10px;
 }
 
 nav ul li a:hover {
-    background: #004080;
-    border-radius: 5px;
+    background: #12452B;
 }
 
 section {
     padding: 2rem;
     margin: 2rem auto;
     max-width: 1000px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+section a {
+    color: #026635;
+    text-decoration: underline;
+}
+
+section a:hover {
+    color: #038445;
 }
 
 h2 {
-    color: #0a74da;
+    color: #0C2D1C;
     margin-top: 0;
     font-size: 2rem;
+    text-align: left;
+    font-weight: 600;
 }
 
-.club, .project {
-    border: 1px solid #e0e0e0;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 10px;
+.club, .project, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 0;
     background: #fafafa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.carousel {
+    width: 70%; /* Adjust width as needed */
+    margin: 0 auto; /* This will center the carousel horizontally */
+    padding-top: 20px;
 }
 
-.club h3, .project h3 {
-    color: #0056a3;
-    margin-top: 0;
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.carousel p {
+    text-align: center;
+}
+
+.slick-prev:before{
+    color: #0C2D1C !important; /* Ensure specificity and use !important if necessary */
+    font-size: 24px; /* Adjust font size if needed */
+
+}
+.slick-next:before{
+    color: #0C2D1C !important; /* Ensure specificity and use !important if necessary */
+    font-size: 24px; /* Adjust font size if needed */
+}
+
+.club h3, .project h3, .contact h3 {
+    color: #026635;
     font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.club p, .project p, .contact p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.project .video {
+    width: 100%; /* Ensure the video takes up the full width of its container */
+    max-width: 100%; /* Adjust max-width as per your design */
+    display: flex; /* Ensure it behaves as a block element */
+    margin-top: 1rem; /* Optional margin-top for spacing */
+}
+
+.project .video iframe{
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-method i {
+    margin-right: 1.5rem;
+    margin-left: .5rem;
+    font-size: 1.5rem;
+    color: #0C2D1C;
+}
+
+.contact-method a {
+    color: #013220;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.contact-method a:hover {
+    color: #026635;
 }
 
 footer {
-    background: #333;
+    background: #0C2D1C;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
     margin-top: 2rem;
 }
 
 a {
-    color: #0a74da;
+    color: #013220;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #0056a3;
+    color: #026635;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
 
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    section {
-        padding: 1rem;
-        margin: 1rem;
-    }
-}
